@@ -1,0 +1,8 @@
+module sensor_decoder(
+input wire sensor,
+output wire led
+);
+
+assign led=sensor;
+
+endmodule
