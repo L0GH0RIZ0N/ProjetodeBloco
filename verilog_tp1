@@ -1,8 +1,20 @@
 module sensor_decoder(
+
+input wire clk,
 input wire sensor,
-output wire led
+
+output reg led
+
 );
 
-assign led=sensor;
+always @(posedge clk)
+begin
+
+if(sensor)
+led <= 1;
+else
+led <= 0;
+
+end
 
 endmodule
